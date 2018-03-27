@@ -56,9 +56,8 @@
                           </Group>
                           <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="Ending" min="-2" max="-2" attributes="0"/>
-                              <Component id="Start" min="-2" max="-2" attributes="0"/>
-                              <Component id="Button" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="EndingVal" min="-2" max="-2" attributes="0"/>
+                              <Component id="StartVal" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -67,6 +66,11 @@
                       </Group>
                   </Group>
                   <EmptySpace pref="28" max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <Component id="ExecuteProgram" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -78,15 +82,15 @@
                   <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="Start" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="StartVal" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="Ending" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="EndingVal" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="Button" min="-2" max="-2" attributes="0"/>
+                  <Component id="ExecuteProgram" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   <Component id="Output" min="-2" pref="46" max="-2" attributes="0"/>
                   <EmptySpace pref="29" max="32767" attributes="0"/>
@@ -105,33 +109,33 @@
             <Property name="text" type="java.lang.String" value="ENTER AN ENDING NUMBER"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="Start">
+        <Component class="javax.swing.JTextField" name="StartVal">
           <Properties>
             <Property name="text" type="java.lang.String" value="jTextField1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="Ending">
+        <Component class="javax.swing.JTextField" name="EndingVal">
           <Properties>
             <Property name="text" type="java.lang.String" value="jTextField2"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="Title">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="11" style="1"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="LOOPER"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="Button">
+        <Component class="javax.swing.JButton" name="ExecuteProgram">
           <Properties>
             <Property name="text" type="java.lang.String" value="Show Values"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ExecuteProgramActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="Output">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jLabel4"/>
-          </Properties>
         </Component>
       </SubComponents>
     </Container>

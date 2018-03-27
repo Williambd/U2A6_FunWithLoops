@@ -29,10 +29,10 @@ public class FunWithLoops extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        Start = new javax.swing.JTextField();
-        Ending = new javax.swing.JTextField();
+        StartVal = new javax.swing.JTextField();
+        EndingVal = new javax.swing.JTextField();
         Title = new javax.swing.JLabel();
-        Button = new javax.swing.JButton();
+        ExecuteProgram = new javax.swing.JButton();
         Output = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -43,20 +43,19 @@ public class FunWithLoops extends javax.swing.JFrame {
 
         jLabel2.setText("ENTER AN ENDING NUMBER");
 
-        Start.setText("jTextField1");
+        StartVal.setText("jTextField1");
 
-        Ending.setText("jTextField2");
+        EndingVal.setText("jTextField2");
 
+        Title.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         Title.setText("LOOPER");
 
-        Button.setText("Show Values");
-        Button.addActionListener(new java.awt.event.ActionListener() {
+        ExecuteProgram.setText("Show Values");
+        ExecuteProgram.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtonActionPerformed(evt);
+                ExecuteProgramActionPerformed(evt);
             }
         });
-
-        Output.setText("jLabel4");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -73,13 +72,16 @@ public class FunWithLoops extends javax.swing.JFrame {
                                 .addComponent(jLabel2)))
                         .addGap(31, 31, 31)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Ending, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Start, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Button)))
+                            .addComponent(EndingVal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(StartVal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(38, 38, 38)
                         .addComponent(Output, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(28, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(ExecuteProgram)
+                .addGap(79, 79, 79))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -89,13 +91,13 @@ public class FunWithLoops extends javax.swing.JFrame {
                 .addGap(61, 61, 61)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(Start, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(StartVal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(Ending, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(EndingVal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(Button)
+                .addComponent(ExecuteProgram)
                 .addGap(27, 27, 27)
                 .addComponent(Output, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(29, Short.MAX_VALUE))
@@ -115,13 +117,21 @@ public class FunWithLoops extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonActionPerformed
-        String hi = " ";
-        for (int i = Integer.parseInt(Start.getText()); i <= Integer.parseInt(Ending.getText());i++){
-            hi = hi + Integer.toString(i)+" ";
+    private void ExecuteProgramActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExecuteProgramActionPerformed
+        String values = " ";
+        
+        //Start Val
+        int startVal = Integer.parseInt(StartVal.getText());
+        //end Val
+        int endVal = Integer.parseInt(EndingVal.getText());
+        
+        //adds each value to the variable values
+        for (int i = startVal; i <= endVal;i++){
+            values = values + Integer.toString(i)+" ";
         } 
-        Output.setText(hi);
-    }//GEN-LAST:event_ButtonActionPerformed
+        
+        Output.setText(values);
+    }//GEN-LAST:event_ExecuteProgramActionPerformed
 
     /**
      * @param args the command line arguments
@@ -159,10 +169,10 @@ public class FunWithLoops extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Button;
-    private javax.swing.JTextField Ending;
+    private javax.swing.JTextField EndingVal;
+    private javax.swing.JButton ExecuteProgram;
     private javax.swing.JLabel Output;
-    private javax.swing.JTextField Start;
+    private javax.swing.JTextField StartVal;
     private javax.swing.JLabel Title;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
