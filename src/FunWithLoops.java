@@ -43,9 +43,11 @@ public class FunWithLoops extends javax.swing.JFrame {
 
         jLabel2.setText("ENTER AN ENDING NUMBER");
 
-        StartVal.setText("jTextField1");
-
-        EndingVal.setText("jTextField2");
+        EndingVal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EndingValActionPerformed(evt);
+            }
+        });
 
         Title.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         Title.setText("LOOPER");
@@ -71,9 +73,9 @@ public class FunWithLoops extends javax.swing.JFrame {
                                 .addComponent(jLabel1)
                                 .addComponent(jLabel2)))
                         .addGap(31, 31, 31)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(EndingVal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(StartVal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(EndingVal, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
+                            .addComponent(StartVal)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(38, 38, 38)
                         .addComponent(Output, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -132,6 +134,10 @@ public class FunWithLoops extends javax.swing.JFrame {
         
         Output.setText(values);
     }//GEN-LAST:event_ExecuteProgramActionPerformed
+
+    private void EndingValActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EndingValActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EndingValActionPerformed
 
     /**
      * @param args the command line arguments
