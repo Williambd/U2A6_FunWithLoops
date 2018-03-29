@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Fun with loops
+ * created by widea9928
+ * on 29/03/2018
+ * to show values between two given numbers.
  */
 
 /**
@@ -127,11 +128,12 @@ public class FunWithLoops extends javax.swing.JFrame {
         //end Val
         int endVal = Integer.parseInt(EndingVal.getText());
         
-        //adds each value to the variable values
+        //adds each number to the string, until you reach the highest value.
         for (int i = startVal; i <= endVal;i++){
             values = values + Integer.toString(i)+" ";
         } 
         
+        //outputs the final string
         Output.setText(values);
     }//GEN-LAST:event_ExecuteProgramActionPerformed
 
